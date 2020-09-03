@@ -1,0 +1,23 @@
+name: $(SourceBranchName)
+pool:
+  vmImage: 'Ubuntu-16.04'
+
+trigger:
+  branches:
+    include:
+    - master
+    - develop
+pr: none
+
+stages:
+- stage: Test
+  displayName: Test
+  
+  jobs:
+  - job: Integration
+    displayName: 'Integration Tests e2e'
+
+    steps: 
+      - script: |
+      sudo echo 127.0.0.1 dev.local >> /etc/hosts
+      npx serve --symlinks --cors --no-clipboard --single --ssl-cert localhost.crt --ssl-key localhost.key -l tcp://dev.local:8080 $(System.DefaultWorkingDirectory)/dist 

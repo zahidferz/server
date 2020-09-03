@@ -1,0 +1,10 @@
+/*!
+ * Cropper.js v1.5.1
+ * https://fengyuanchen.github.io/cropperjs
+ *
+ * Copyright 2015-present Chen Fengyuan
+ * Released under the MIT license
+ *
+ * Date: 2019-03-10T09:55:50.492Z
+ */.gx-controls{width:390px}input[type=range]{-webkit-appearance:none;width:100%;background:transparent}input[type=range]::-webkit-slider-thumb{-webkit-appearance:none}input[type=range]::-ms-track{width:100%;color:transparent;cursor:pointer;background:transparent;border-color:transparent}input[type=range]:focus{outline:none}input[type=range].gx-range{height:2px;color:#a176ff;background:#a176ff;border-block-color:#a176ff}input[type=range].gx-range::-webkit-slider-thumb{width:12px;height:12px;cursor:pointer;background:#4b23ef;border-radius:50%;-webkit-box-shadow:0 0 0;box-shadow:0 0 0;-webkit-appearance:none}input[type=range].gx-range::-moz-range-thumb{width:12px;height:12px;cursor:pointer;background:#4b23ef;border:none;border-radius:50%;box-shadow:0 0 0;-webkit-appearance:none}
+/*# sourceMappingURL=chunk-716fd9aa.4d35902f.css.map */

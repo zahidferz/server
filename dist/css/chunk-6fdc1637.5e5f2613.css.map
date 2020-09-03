@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///src/components/_Core/Lists/GxBulletList.vue"],"names":[],"mappings":"AAuBA,gCACE,UAAY,CACZ,oBAAqB","file":"chunk-6fdc1637.5e5f2613.css","sourcesContent":["\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.bullet-list {\n  color: black;\n  list-style-type: disc;\n}\n"]}
