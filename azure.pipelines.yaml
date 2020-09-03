@@ -20,8 +20,6 @@ stages:
     steps: 
       - script: |
           sudo -- sh -c "echo 127.0.0.1 dev.local >> /etc/hosts"
-          cat /etc/hosts
-          ls
-          npx serve --symlinks --cors --no-clipboard --single -l 8080 dist  > /dev/null &
+          npx serve --symlinks --cors --no-clipboard --single --ssl-cert localhost.crt --ssl-key localhost.key -l tcp://dev.local:8080 $(System.DefaultWorkingDirectory)/dist  > /dev/null &
           sleep 10
-          curl http://localhost:8080
+          curl https://dev.local:8080
