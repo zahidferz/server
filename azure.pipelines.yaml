@@ -22,5 +22,5 @@ stages:
           sudo -- sh -c "echo 127.0.0.1 dev.local >> /etc/hosts"
           cat /etc/hosts
           ls
-          npx serve --symlinks --cors --no-clipboard --single -l tcp://dev.local:8080 dist  > /dev/null &
+          npx serve --symlinks --cors --no-clipboard --single -l 8080 dist  > /dev/null &
           curl http://localhost:8080
