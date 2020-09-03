@@ -23,4 +23,5 @@ stages:
           cat /etc/hosts
           ls
           npx serve --symlinks --cors --no-clipboard --single -l 8080 dist  > /dev/null &
+          sleep 10
           curl http://localhost:8080
