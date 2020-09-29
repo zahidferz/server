@@ -1,6 +1,6 @@
 name: $(SourceBranchName)
 pool:
-  vmImage: 'Ubuntu-16.04'
+  vmImage: 'Ubuntu-18.04'
 
 trigger:
   branches:
@@ -19,7 +19,7 @@ stages:
 
     steps: 
       - script: |
-          sudo -- sh -c "echo 127.0.0.1 dev.local >> /etc/hosts"
-          npx serve --symlinks --cors --no-clipboard --single -l tcp://dev.local:8080 $(System.DefaultWorkingDirectory)/dist  > /dev/null &
-          sleep 10
-          curl http://dev.local:8080
+          sudo apt-get update
+          sudo apt-get install elixir
+      - script: |
+          mix new .
