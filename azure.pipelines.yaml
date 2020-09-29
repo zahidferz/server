@@ -3,6 +3,6 @@ pool:
 
 container:
   image: elevacontainerregistry.azurecr.io/elixir:latest
-  endpoint: gx-azure
+  endpoint: docker-eleva
   
 
