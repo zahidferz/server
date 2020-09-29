@@ -1,26 +1,8 @@
-name: $(SourceBranchName)
 pool:
   vmImage: 'ubuntu-18.04'
 
 container:
   image: elevacontainerregistry.azurecr.io/elixir:latest
   endpoint: gx-azure
-
-trigger:
-  branches:
-    include:
-    - master
-    - develop
-pr: none
-
-stages:
-- stage: Test
-  displayName: Test
   
-  jobs:
-  - job: Test
-    displayName: 'Tests elixir'
 
-    steps: 
-      - script: |
-          elixir -v
