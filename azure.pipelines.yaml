@@ -2,7 +2,6 @@ pool:
   vmImage: 'ubuntu-18.04'
 
 container:
-  image: elevacontainerregistry.azurecr.io/elixir:latest
-  endpoint: docker-eleva
+  image: elixir
   
 
