@@ -1,6 +1,10 @@
 name: $(SourceBranchName)
 pool:
-  vmImage: 'Ubuntu-18.04'
+  vmImage: 'ubuntu-18.04'
+
+container:
+  image: elevacontainerregistry.azurecr.io/elixir:latest
+  endpoint: gx-azure
 
 trigger:
   branches:
@@ -14,12 +18,9 @@ stages:
   displayName: Test
   
   jobs:
-  - job: Integration
-    displayName: 'Integration Tests e2e'
+  - job: Test
+    displayName: 'Tests elixir'
 
     steps: 
-      - script: |
-          sudo apt-get update
-          sudo apt-get install elixir
       - script: |
           elixir -v
