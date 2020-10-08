@@ -1,9 +1,10 @@
 pool:
   vmImage: 'ubuntu-18.04'
 
-container:
-  image: elixir:1.10.4
-  
-
+ 
 steps:
-- script: elixir -v 
+- task: AzurePowerShell@5
+  inputs:
+    azureSubscription: 'gx-azure'
+    ScriptType: 'InlineScript'
+    Inline: 'exit 1'
