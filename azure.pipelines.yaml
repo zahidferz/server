@@ -18,7 +18,7 @@ jobs:
 
 - job: Bar2
   dependsOn: Bar
-  condition: succeeded()
+  condition: in(dependencies.Bar.result, 'Succeeded', 'Skipped')
 
   steps:
   - script: echo Hello from bar2!
