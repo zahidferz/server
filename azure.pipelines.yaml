@@ -2,9 +2,23 @@ pool:
   vmImage: 'ubuntu-18.04'
 
  
-steps:
-- task: AzurePowerShell@5
-  inputs:
-    azureSubscription: 'gx-azure'
-    ScriptType: 'InlineScript'
-    Inline: 'exit 1'
+jobs:
+- job: Foo
+  condition: ne(variables['IntegrationTests'], 'false')
+  steps:
+  - script: echo Hello!
+
+- job: Bar
+  dependsOn: Foo
+  condition: in(dependencies.Foo.result, 'Succeeded', 'Skipped')
+
+  steps:
+  - script: echo Hello from bar!
+
+
+- job: Bar2
+  dependsOn: Bar
+  condition: succeeded()
+
+  steps:
+  - script: echo Hello from bar2!
