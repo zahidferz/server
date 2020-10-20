@@ -20,7 +20,7 @@ jobs:
       script: |
         echo $env:PathApi
     env:
-      PathApi: $[variables.PathApi]
+      PathApi: ${{ variables.PathApi }}
 
 
 - job: Bar2
