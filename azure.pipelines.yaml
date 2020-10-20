@@ -13,7 +13,14 @@ jobs:
   condition: in(dependencies.Foo.result, 'Succeeded', 'Skipped')
 
   steps:
-  - script: node -v
+  - task: PowerShell@2
+    displayName: 'Updating Clickup Board'
+    inputs:
+      targetType: 'Inline'
+      script: |
+        echo $PathApi
+    env:
+      PathApi: $(PathApi)
 
 
 - job: Bar2
