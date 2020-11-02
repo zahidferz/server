@@ -6,8 +6,6 @@ jobs:
     executor: aws-cli/default
     steps:
       - checkout
-      - aws-cli/setup:
-          profile-name: example
       - run: aws --version
 
 orbs:
