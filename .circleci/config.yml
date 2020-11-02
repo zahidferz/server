@@ -16,10 +16,11 @@ orbs:
 # Orchestrate or schedule a set of jobs
 workflows:
   # Name the workflow "welcome"
-  welcome:
+  welcome-to-aws:
     # Run the welcome/run job in its own container
     jobs:
       - welcome/run
-  aws-cli:
-    jobs:
-      - aws-cli-example
+          name: welcome
+      - aws-cli-example:
+          name: aws-job
+          requires: [welcome]
