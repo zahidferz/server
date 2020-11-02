@@ -21,7 +21,6 @@ workflows:
     # Run the welcome/run job in its own container
     jobs:
       - welcome/run
-  aws-cli:
+  aws:
     jobs:
       - aws-cli-example:
-          context: aws
