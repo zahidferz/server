@@ -19,7 +19,7 @@ workflows:
   welcome-to-aws:
     # Run the welcome/run job in its own container
     jobs:
-      - welcome/run
+      - welcome/run:
           name: welcome
       - aws-cli-example:
           name: aws-job
