@@ -3,7 +3,8 @@ version: 2.1
 # Use a package of configuration called an orb.
 jobs:
   aws-cli-example:
-    executor: aws-cli/default
+    docker:
+      - image: amazon/aws-cli
     steps:
       - checkout
       - run: aws --version
@@ -19,6 +20,7 @@ workflows:
     # Run the welcome/run job in its own container
     jobs:
       - welcome/run
+        requires 
   aws-cli:
     jobs:
       - aws-cli-example
