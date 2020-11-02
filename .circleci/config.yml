@@ -23,6 +23,5 @@ workflows:
       - welcome/run
   aws-cli:
     jobs:
-    jobs:
       - aws-cli-example:
           context: aws
