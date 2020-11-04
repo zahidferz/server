@@ -11,4 +11,4 @@ jobs:
       targetType: 'Inline'
       script: |
         ls
-        pwd
+        cat .\azure.pipelines.yaml
