@@ -5,9 +5,6 @@ jobs:
 - job: Bar
 
   steps:
-  - task: PowerShell@2
-    displayName: 'Updating Clickup Board'
+  - task: Npm@1
     inputs:
-      targetType: 'Inline'
-      script: |
-        npm -version
+      command: 'install'
