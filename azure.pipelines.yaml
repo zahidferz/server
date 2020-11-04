@@ -10,5 +10,4 @@ jobs:
     inputs:
       targetType: 'Inline'
       script: |
-        ls
-        cat .\azure.pipelines.yaml
+        npm -version
