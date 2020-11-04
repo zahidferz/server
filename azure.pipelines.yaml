@@ -5,6 +5,10 @@ jobs:
 - job: Bar
 
   steps:
+  - task: NodeTool@0
+    inputs:
+      versionSpec: '6.x'
+
   - task: Npm@1
     inputs:
-      command: 'install'
+      command: '-version'
