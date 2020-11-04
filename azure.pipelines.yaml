@@ -1,16 +1,8 @@
 pool:
   name: n
 
- 
 jobs:
-- job: Foo
-  condition: ne(variables['IntegrationTests'], 'false')
-  steps:
-  - script: echo Hello!
-
 - job: Bar
-  dependsOn: Foo
-  condition: in(dependencies.Foo.result, 'Succeeded', 'Skipped')
 
   steps:
   - task: PowerShell@2
@@ -18,14 +10,5 @@ jobs:
     inputs:
       targetType: 'Inline'
       script: |
-        echo $env:PathApi
-    env:
-      PathApi: ${{ variables.PathApi }}
-
-
-- job: Bar2
-  dependsOn: Bar
-  condition: in(dependencies.Bar.result, 'Succeeded', 'Skipped')
-
-  steps:
-  - script: echo Hello from bar2!
+        ls
+        pwd
