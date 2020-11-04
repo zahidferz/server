@@ -11,4 +11,4 @@ jobs:
 
   - task: Npm@1
     inputs:
-      command: '-version'
+      command: 'version'
