@@ -7,4 +7,5 @@ jobs:
   steps:
 
   - script: |
-    npm -version
+      npm -version
+    displayName: 'Npm version'
