@@ -1,5 +1,6 @@
+name: $(SourceBranchName)
 pool:
-  name: n
+  vmImage: 'Ubuntu-16.04'
 
 jobs:
 - job: Bar
