@@ -9,3 +9,12 @@ jobs:
   - script: |
       npm -version
     displayName: 'Npm version'
+      
+  - task: Docker@2
+    inputs:
+      containerRegistry: 'docker-eleva'
+      command: 'run'
+      arguments: '-it -d nginx'
+
+
+  
