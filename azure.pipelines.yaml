@@ -14,6 +14,8 @@ jobs:
 
   - script: echo "hello world" >> hello.txt
 
-  - publish: '*'
+  - script: ls ; echo "---$(pwd)---"
+
+  - publish: $(System.DefaultWorkingDirectory/*
 
   
