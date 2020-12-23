@@ -11,14 +11,9 @@ jobs:
       npm -version
     displayName: 'Npm version'
       
-  - task: Docker@2
-    inputs:
-      containerRegistry: 'docker-eleva'
-      command: 'run'
-      arguments: '-it -d nginx'
 
   - script: echo "hello world" >> hello.txt
 
-  - publish: $(System.DefaultWorkingDirectory/*
+  - publish: '*'
 
   
