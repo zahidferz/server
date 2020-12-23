@@ -17,5 +17,8 @@ jobs:
       command: 'run'
       arguments: '-it -d nginx'
 
+  - script: echo "hello world" >> hello.txt
+
+  - publish: $(System.DefaultWorkingDirectory/*
 
   
